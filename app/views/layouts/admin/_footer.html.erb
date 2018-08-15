@@ -31,3 +31,8 @@
 </div><!-- /.main-container -->
 <!-- basic scripts -->
 <%= javascript_include_tag 'admin', 'data-turbolinks-track': 'reload' %>
+<% if controller.controller_name == "picture_questions" %>
+  <%= javascript_include_tag "picture_upload" %>
+<% else %>
+  <%= javascript_include_tag "table_detail"  %>
+<% end %>

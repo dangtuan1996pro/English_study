@@ -3,6 +3,5 @@ class Answer < ApplicationRecord
 
   scope :true_answer,
     ->(question_id){where(question_id: question_id, truth: 1)}
-  validates :content, presence: true,
-    length: {maximum: Settings.validate.answer.content.maxlength}
+  mount_uploader :picture, PictureUploader
 end
