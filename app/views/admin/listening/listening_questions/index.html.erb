@@ -16,7 +16,7 @@
             <div class="col-md-2"></div>
             <div class="input-group col-md-10">
               <span class="input-group-btn btn-add">
-                <a href="#modal-table" role="button" class="green" data-toggle="modal">
+                <a href="<%=new_admin_listening_picture_question_path%>" role="button" class="green" data-toggle="modal">
                   <button type="button" class="btn btn-success btn-sm">
                     <span class="ace-icon fa fa-pencil-square-o icon-on-right bigger-110"></span>
                     <%= t ".add" %>
@@ -44,7 +44,7 @@
                 </thead>
                 <tbody>
                   <% @question_type_picture.each do |question_type| %>
-                    <%= render "question_type",question_type: question_type  %>
+                    <%= render "admin/listening/picture_questions/question_type",question_type: question_type  %>
                     <tr class="detail-row">
                       <td colspan="8">
                         <div class="table-detail">
@@ -114,7 +114,7 @@
                   </thead>
                   <tbody>
                       <% @question_type_conversation.each do |question_type| %>
-                        <%= render "question_type",question_type: question_type  %>
+                        <%= render "admin/listening/conversation_questions/question_type",question_type: question_type  %>
                         <tr class="detail-row">
                           <td colspan="8">
                             <div class="table-detail">

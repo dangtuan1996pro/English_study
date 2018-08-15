@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_01_034346) do
+ActiveRecord::Schema.define(version: 2018_08_17_204827) do
 
   create_table "answers", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "content"
@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 2018_08_01_034346) do
     t.integer "user_track_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "picture"
     t.index ["question_id"], name: "index_answers_on_question_id"
   end
 
@@ -31,7 +32,7 @@ ActiveRecord::Schema.define(version: 2018_08_01_034346) do
   end
 
   create_table "question_types", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.text "content"
+    t.string "content"
     t.bigint "topic_id"
     t.bigint "exam_id"
     t.datetime "created_at", null: false
@@ -53,7 +54,6 @@ ActiveRecord::Schema.define(version: 2018_08_01_034346) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "code"
-    t.index ["code"], name: "index_topics_on_code", unique: true
   end
 
   create_table "user_exams", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|

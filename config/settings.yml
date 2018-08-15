@@ -11,3 +11,6 @@ Admin:
   conversation_question:
     num_question: 3
     num_answer: 3
+  picture_question:
+    num_question: 1
+    num_answer: 4
