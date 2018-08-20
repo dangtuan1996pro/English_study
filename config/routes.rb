@@ -31,6 +31,7 @@ Rails.application.routes.draw do
       end
     end
   end
+  root "static_pages#index"
   get "listening", to: "listening#index"
   get "writing", to: "writing#index"
   get "listening", to: "listening#index"
@@ -38,4 +39,13 @@ Rails.application.routes.draw do
   get "reading", to: "reading#index"
   post "reading/exams", to: "reading#exams_by_topic"
   get "reading/show/:id", to: "reading#show"
+  get "/signup", to: "users#new"
+  post "/signup", to: "users#create"
+  get "sessions/new"
+  get "/login", to: "sessions#new"
+  post "/login", to: "sessions#create"
+  delete "/logout", to: "sessions#destroy"
+  resources :users
+  resources :account_activations, only: [:edit]
+  resources :password_resets, only: [:new, :create, :edit, :update]
 end

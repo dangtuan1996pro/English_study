@@ -3,3 +3,9 @@
 @import "user/plugins/OwlCarousel2-2.2.1/owl.carousel";
 @import "user/plugins/OwlCarousel2-2.2.1/owl.theme.default";
 @import "user/plugins/OwlCarousel2-2.2.1/animate";
+
+.my-container{
+  margin-top: 120px;
+  margin-left: 350px;
+  margin-bottom: 50px;
+}

@@ -5,6 +5,26 @@ validate:
   answer:
     content:
       maxlength: 150
+  user:
+    name:
+      maxlength: 50
+    email:
+      maxlength: 150
+    password:
+      maxlength: 6
+  micropost:
+    content:
+      maxlength: 140
+user_helper:
+  size_gravatar: 150
+user:
+  size_gravatar: 80
+  size_gravatar_all: 50
+  hours_ago: 2
+per_page: 10
+picture_size: 5
+picture_width: 50
+picture_height: 50
 Admin:
   grammar_exams:
     per_page: 10

@@ -48,29 +48,35 @@
                     <%= link_to "Writing", writing_path, class: "dropdown-item" %>
                   </div>
                 </li>
+                <% if logged_in? %>
+                  <li class="nav-item"><%= link_to t(".user"), users_path %></li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <%= t ".account" %>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <%= link_to t(".Profile"), current_user, class: "dropdown-item" %>
+                      <%= link_to t(".Settings"), edit_user_path(current_user), class: "dropdown-item" %>
+                      <%= link_to t(".Log out"), logout_path, method: :delete, class: "dropdown-item" %>
+                    </div>
+                  </li>
+                <% else %>
+                  <li class="nav-item"><%= link_to t(".Log in"), login_path %>|
+                  <%= link_to "Signup", signup_path%>
+                  </li>
+                <% end %>
+                <% if is_admin? %>
+                  <li class="nav-item"><%= link_to "Manager", admin_listening_listening_questions_url %></li>
+                <% end %>
               </ul>
             </nav>
-            <div class="header_content_right ml-auto text-right">
-              <div class="header_search">
-                <div class="search_form_container">
-                  <form action="#" id="search_form" class="search_form trans_400">
-                    <input type="search" class="header_search_input trans_400" placeholder="Type for Search" required="required">
-                    <div class="search_button">
-                      <i class="fa fa-search" aria-hidden="true"></i>
-                    </div>
-                  </form>
-                </div>
-              </div>
-
-              <!-- Hamburger -->
-              <div class="user"><a href="#"><i class="fa fa-user" aria-hidden="true"></i></a></div>
-              <div class="hamburger menu_mm">
-                <i class="fa fa-bars menu_mm" aria-hidden="true"></i>
-              </div>
-            </div>
-
           </div>
         </div>
+      </div>
+      <div class="row">
+        <% flash.each do |message_type, message| %>
+          <div class="alert alert-<%= message_type %>"><%= message %></div>
+        <% end %>
       </div>
     </div>
   </div>

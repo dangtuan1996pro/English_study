@@ -353,9 +353,89 @@ en:
       exam: "Exam"
       about_these_exams: "About these exams"
       all_instructors: "All instructors"
-      start: "Start"
-      
+      start: "Start"    
   writing:
     index:
       category_of_writing_exam: "Category of writing exam"
       writing: "Writing"
+  sessions:
+    create:
+      flash_danger: "Invalid email/password combination"
+      message: "Account not activated.Check your email for the activation link."
+    new:
+      title: "Log in"
+      btnSingup: "Sign up now!"
+      btnLogIn: "Log in"
+      new_user: "New user? "
+      remember: "Remember me on this computer"
+  account_activations:
+    edit:
+      flash_success: "Account activated!"
+      flash_danger: "Invalid activation link"
+  user_mailer:
+    subject_account: "Account activation"
+    subject_password: "Password reset"
+    account_activation:
+      title: "sample app"
+      hi: "Hi"
+      content: "Welcome to the Sample App! Click on the link below to activate your account:"
+      activate: "Activate"
+    password_reset:
+      title: "Password reset"
+      content1: "To reset your password click the link below:"
+      content2: "This link will expire in two hours."
+      content3: "If you did not request your password to be reset, please ignore this email and your password will stay as it is."
+      reset: "Reset password"
+  password_resets:
+    create:
+      flass_info: "Email sent with password reset instructions"
+      flash_danger: "Email address not found"
+    update:
+      error: "can't be empty"
+      flash_success: "Password has been reset."
+    check_expiration:
+      flash_danger: "Password reset has expired."
+    edit:
+      title: "Reset password"
+      btn_update: "Update password"
+    new:
+      title: "Forgot password"
+      btn_submit: "Submit"
+  users:
+    new:
+      title: "Sign up"
+      btnSubmit: "Create my account"
+    edit:
+      title: "Edit User"
+      btnSubmit: "Save change"
+      btnChange: "Change"
+    create:
+      flash_success: "Welcome to the Sample App!"
+      flash_activate: "Please check your email to activate your account."
+    update:
+      flash_success: "Profile updated"
+    show:
+      flash_notice: "Không tìm thấy user nào!"
+      micropost: "Microposts"  
+    _user:
+      delete: ":delete"
+      confirm: "You sure?"
+    index:
+      title: "All users"
+    destroy:
+      flash: "User deleted"
+    logged_in_user:
+      flash: "Please log in."
+    find_user:
+      flash: "none"
+    following:
+      title: "Following"
+    followers:
+      title: "Followers"
+    follow:
+      btn_follow: "Follow"
+    unfollow:
+      btn_unfollow: "Unfollow"
+    show_follow:
+      view_profile: "view my profile"
+      micropost: "Microposts:"
