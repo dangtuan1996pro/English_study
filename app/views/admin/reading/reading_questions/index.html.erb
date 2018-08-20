@@ -128,7 +128,7 @@
             <div class="col-md-2"></div>
             <div class="input-group col-md-10">
               <span class="input-group-btn btn-add">
-                <a href="#ThemPart3" role="button" class="green" data-toggle="modal">
+                <a href="<%=new_admin_reading_paragraph_question_path%>" role="button" class="green" data-toggle="modal">
                   <button type="button" class="btn btn-success btn-sm">
                     <span class="ace-icon fa fa-pencil-square-o icon-on-right bigger-110"></span>
                     <%= t ".add" %>
@@ -157,10 +157,24 @@
 
                 <tbody>
                   <% @question_type_paragraph.each do |question_type| %>
-                    <%= render "question_type",question_type: question_type  %>
-                    <% question_type.questions.each do |question| %>
-                      <%= render "admin/reading/paragraph_questions/question",question: question  %>
-                    <% end %>
+                    <%= render "admin/reading/paragraph_questions/question_type",question_type: question_type  %>
+                    <tr class="detail-row">
+                      <td colspan="8">
+                        <div class="table-detail">
+                          <div class="row">
+                            <div class="col-xs-12 col-sm-12">
+                              <table id="simple-table" class="table  table-bordered table-hover">
+                                <tbody>
+                                  <% question_type.questions.each do |question| %>
+                                    <%= render "admin/reading/paragraph_questions/question",question: question  %>
+                                  <% end %>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
                   <% end %>
                 </tbody>
               </table>

@@ -162,6 +162,8 @@ en:
           part2: "Part 2: Sign reading"
           part3: "Part 3: Paragraph reading"
           part4: "Part 4: Filling reading"
+        destroy:
+          flash: "Question deleted"
       shared:
         list_exam:
           create_exam: "Create exam"
@@ -196,8 +198,38 @@ en:
         destroy:
           flash: "Question deleted"
       paragraph_questions:
+        question_type:
+          detail: "Details"
+          browser: "Your browser does not support the audio element."
+          answer: "answer:"
+          delete: "Delete"
+          confirm: "You sure?"
         question:
           answer: "answer:"
+        new:
+          title: "Create a new paragraph question"
+          question: "Question"
+          answer: "Answer"
+          close: "Close"
+          submit: "Submit"
+          file: "Link file"
+          option: "Option"
+          is_answer: "Is answer"
+          audio_message: "Your browser not support"
+        edit:
+          title: "Edit a paragraph question"
+          question: "Question"
+          answer: "Answer"
+          close: "Close"
+          submit: "Submit"
+          file: "Link file"
+          option: "Option"
+          is_answer: "Is answer"
+          audio_message: "Your browser not support"
+        create:
+          flash_success: "Create success"
+        update:
+          flash_success: "Update success"
       sign_questions:
         question:
           answer: "answer:"
