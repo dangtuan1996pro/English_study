@@ -18,3 +18,6 @@ Admin:
     num_answer: 4
   sign_question:
     num_answer: 3
+  paragraph_question:
+    num_question: 4
+    num_answer: 4
