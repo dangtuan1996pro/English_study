@@ -14,3 +14,5 @@ Admin:
   picture_question:
     num_question: 1
     num_answer: 4
+  grammar_question:
+    num_answer: 4
