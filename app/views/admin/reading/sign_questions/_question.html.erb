@@ -5,7 +5,7 @@
       <span class="lbl"></span>
     </label>
   </td>
-  <td><img height="150" class="thumbnail inline no-margin-bottom" alt="Ảnh không hợp lệ" src="<%= question.title %>"></td>
+  <td><img height="150" class="thumbnail inline no-margin-bottom" alt="Ảnh không hợp lệ" src="<%= question.picture %>"></td>
   <% question.answers.each do |answer| %>
     <td><%= answer.content %></td>
   <% end %>
@@ -14,17 +14,19 @@
   </td>
   <td>
     <div class="hidden-sm hidden-xs btn-group">
-      <a href="#SuaPart1" role="button" data-toggle="modal">
+      <a href="<%=edit_admin_reading_sign_question_path question%>" role="button" data-toggle="modal">
         <button class="btn btn-xs btn-info">
           <i class="ace-icon fa fa-pencil bigger-120"></i>
         </button>
       </a>
-      <a href="#XoaPart1" role="button" data-toggle="modal">
-        <button class="btn btn-xs btn-danger">
-          <i class="ace-icon fa fa-trash-o bigger-120">
-          </i>
-        </button>
-      </a>
+      <% if not_belong_to_exam(question.question_type) %>
+        <%= link_to admin_reading_sign_question_path(question), method: :delete, data: { confirm: t(".confirm") } do %>
+          <button class="btn btn-xs btn-danger">
+            <i class="ace-icon fa fa-trash-o bigger-120">
+            </i>
+          </button>
+        <% end %>
+      <% end %>
     </div>
   </td>
 </tr>
