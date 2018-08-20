@@ -15,6 +15,7 @@ Rails.application.routes.draw do
         resources :grammar_questions
         resources :sign_questions
         resources :paragraph_questions
+        resources :filling_questions
       end
       namespace :writing, path: "/" do
         resources :writing_questions 

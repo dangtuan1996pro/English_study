@@ -1,23 +1,9 @@
-<tr class="detail-row">
-  <td colspan="8">
-    <div class="table-detail">
-      <div class="row">
-        <div class="col-xs-12 col-sm-12">
-          <table id="simple-table" class="table  table-bordered table-hover">
-            <tbody>
-              <tr>
-                <td><%= question.title %></td>
-                <% question.answers.each do |answer| %>
-                  <td><%= answer.content %></td>
-                <% end %>
-                <td>
-                  <%= t ".answer"%><br/><%= Answer.true_answer(question.id).first&.content %>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </div>
+<tr>
+  <td><%= question.title %></td>
+  <% question.answers.each do |answer| %>
+    <td><%= answer.content %></td>
+  <% end %>
+  <td>
+    <%= t ".answer"%><br/><%= Answer.true_answer(question.id).first&.content %>
   </td>
 </tr>
