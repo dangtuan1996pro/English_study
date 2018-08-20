@@ -21,3 +21,6 @@ Admin:
   paragraph_question:
     num_question: 4
     num_answer: 4
+  filling_question:
+    num_question: 4
+    num_answer: 4

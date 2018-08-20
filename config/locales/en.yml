@@ -171,8 +171,38 @@ en:
           name: "Name"
           order_number: "#"
       filling_questions:
+        question_type:
+          detail: "Details"
+          browser: "Your browser does not support the audio element."
+          answer: "answer:"
+          delete: "Delete"
+          confirm: "You sure?"
         question:
           answer: "answer:"
+        new:
+          title: "Create a new filling question"
+          question: "Question"
+          answer: "Answer"
+          close: "Close"
+          submit: "Submit"
+          file: "Paragraph"
+          option: "Option"
+          is_answer: "Is answer"
+          audio_message: "Your browser not support"
+        edit:
+          title: "Edit a filling question"
+          question: "Question"
+          answer: "Answer"
+          close: "Close"
+          submit: "Submit"
+          file: "Paragraph"
+          option: "Option"
+          is_answer: "Is answer"
+          audio_message: "Your browser not support"
+        create:
+          flash_success: "Create success"
+        update:
+          flash_success: "Update success"
       grammar_questions:
         question:
           answer: "answer:"
@@ -212,7 +242,7 @@ en:
           answer: "Answer"
           close: "Close"
           submit: "Submit"
-          file: "Link file"
+          file: "Paragraph"
           option: "Option"
           is_answer: "Is answer"
           audio_message: "Your browser not support"
@@ -222,7 +252,7 @@ en:
           answer: "Answer"
           close: "Close"
           submit: "Submit"
-          file: "Link file"
+          file: "Paragraph"
           option: "Option"
           is_answer: "Is answer"
           audio_message: "Your browser not support"
