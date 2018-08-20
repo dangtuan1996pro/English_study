@@ -16,3 +16,5 @@ Admin:
     num_answer: 4
   grammar_question:
     num_answer: 4
+  sign_question:
+    num_answer: 3
