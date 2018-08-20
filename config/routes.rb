@@ -8,6 +8,7 @@ Rails.application.routes.draw do
       end
       namespace :reading, path: "/" do
         resources :reading_questions
+        resources :grammar_questions
       end
       namespace :writing, path: "/" do
         resources :writing_questions 
